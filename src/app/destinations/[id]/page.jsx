@@ -5,7 +5,9 @@ import { Button, Card, Link } from "@heroui/react";
 
 const DetelsPage = async ({ params }) => {
   let { id } = await params;
-  let res = await fetch(`http://localhost:7000/destinations/${id}`);
+  let res = await fetch(
+    `https://crud-bakend-e51s.vercel.app/destinations/${id}`,
+  );
   let data = await res.json();
   let {
     _id,

@@ -2,7 +2,7 @@ import React from "react";
 import { CardS } from "../components/Card";
 
 const DestinationPage = async () => {
-  let res = await fetch("http://localhost:7000/destinations");
+  let res = await fetch("https://crud-bakend-e51s.vercel.app/destinations");
   let datas = await res.json();
   console.log(datas);
   return (

@@ -6,9 +6,12 @@ import { redirect } from "next/navigation";
 export function DeleteModals({ data }) {
   let { _id } = data;
   let deleteFunction = async () => {
-    let res = await fetch(`http://localhost:7000/destinations/${_id}`, {
-      method: "DELETE",
-    });
+    let res = await fetch(
+      `https://crud-bakend-e51s.vercel.app/destinations/${_id}`,
+      {
+        method: "DELETE",
+      },
+    );
     let data = await res.json();
     console.log(data);
     if (data.deletedCount > 0) {

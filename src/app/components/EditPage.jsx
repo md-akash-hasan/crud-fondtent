@@ -31,11 +31,14 @@ export function Editpage({ data }) {
     e.preventDefault();
     let formData = new FormData(e.target);
     let datas = Object.fromEntries(formData.entries());
-    let res = await fetch(`http://localhost:7000/destinations/${_id}`, {
-      method: "PATCH",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(datas),
-    });
+    let res = await fetch(
+      `https://crud-bakend-e51s.vercel.app/destinations/${_id}`,
+      {
+        method: "PATCH",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(datas),
+      },
+    );
     let data = await res.json();
     if (data.matchedCount > 0) {
       alert("successfully submit");
