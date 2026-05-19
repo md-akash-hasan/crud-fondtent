@@ -10,7 +10,7 @@ const DestinationPage = async () => {
       <h1 className="font-bold text-center pt-3">
         Total Destination: {datas.length}
       </h1>
-      <div className="grid grid-cols-3 gap-5 my-3 mb-7">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-3 mb-7">
         {datas.map((data) => (
           <CardS key={data._id} data={data} />
         ))}
