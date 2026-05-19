@@ -16,7 +16,7 @@ export function DeleteModals({ data }) {
     console.log(data);
     if (data.deletedCount > 0) {
       alert("Delete Bangladesh");
-      redirect(`http://localhost:3001/destinations`);
+      redirect(`https://crud-fondtent.vercel.app/destinations`);
     }
   };
   return (
